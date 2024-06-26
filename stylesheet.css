@@ -5,18 +5,225 @@
 rgba(122, 191, 191, .5)
 #EB5428
 */
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 
-* {
+.montserrat-regular {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.montserrat-bold {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
     background-color: rgba(122, 191, 191, .5);
 }
 
 body {
     background-color: #f2f2f2;
-    min-width: 414px;
-    max-width: 85%;
     margin: 0 auto;
-
+    color: #0d0d0d;
 }
+
+body, img[src$=".png"] {
+    max-width: 414px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: "Bebas Neue", sans-serif;
+    margin: 10px;
+    text-align: center;
+}
+
+h1 {
+    padding: 10px 0;;
+}
+
+p, li {
+    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    font-size: 1em;
+}
+
+ul li {
+    list-style: none;
+    padding: 5px 0;
+}
+
+#ingredients li {
+    list-style: square;
+    margin-left: 15px;
+}
+
+ol {
+    padding-left: 25px;
+}
+
+ul {
+    padding: 0 10px;
+}
+
+#recipecontrols li {
+    display: block;
+    list-style: none;
+    text-align: center;
+}
+
+#recipecontrols {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 0 0.5em 0;
+    padding: 0px;
+}
+
+#recipecontrols p {
+    margin: 0;
+    font-family: "Bebas Neue", sans-serif;
+    color: #EB5428;
+}
+
+
+
+
+/* Not sure why this doesnt work... */
+
+
+
+
+#details li {
+    font-size: 700;
+}
+
+
+
+/* Not sure why this doesnt work... */
+
+
+
+
+.detailslist {
+    padding-left: 10px;
+    font-size: 400;
+}
+
+aside {
+    background-color: #7ABFBF;
+    padding: 10px;
+    /* margin: 10px;
+    border-radius: 10px; */
+}
+
+/* section>img {
+    width: 20%;
+    height: auto;
+} */
+
+aside section {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "img h3"
+                         "img p1"
+                         "img p2"
+                         "img div"
+}
+
+aside img {
+    grid-area: img;
+    width: 100%;
+    height: auto;
+}
+
+aside h3 {
+    grid-area: h3;
+    margin: 0;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 1.3em;
+}
+
+aside p:first-of-type {
+    grid-area: p1;
+    padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+/* Not sure why this isnt working... */
+
+
+
+
+aside section p:nth-child(2) {
+    grid-area: p2;
+    padding-left: 40px;
+}
+
+
+
+/* Not sure why this isnt working... */
+
+
+
+
+
+
+
+
+
+
+aside div {
+    grid-area: div;
+    padding-left: 20px;
+}
+
+aside p:last-of-type {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 700px) {
     body {
