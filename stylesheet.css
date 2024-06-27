@@ -264,6 +264,22 @@ input:checked ~ ul .menu, input:checked ~ ul .menu img {
     display: block;
 }
 
+input:checked ~ ul {
+    flex-direction: column;
+    z-index: 1;
+}
+
+nav ul img {
+    width: 70px;
+    padding-bottom: 15px;
+}
+
+nav ul a {
+    color: #EB5428;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5em;
+}
+
 
 
 /* ------------------------------------------------not sure here------------------------------------------------------------------------ */
@@ -379,6 +395,10 @@ nav #home {
 nav li:last-of-type {
     flex:30%;
 }
+
+/* nav li:not(:first-of-type), nav li:not(:last-of-type) {
+    flex-direction: column;
+} */
 
 nav li:last-of-type::after {
     content: "Sign In/Up";
@@ -515,6 +535,77 @@ nav ul {
         display: none;
     }
 
+    nav li:last-of-type::after {
+        content: "Sign In";
+    }
+
+    label {
+        display: none;
+    }
+
+    nav ul li:not(:first-of-type), nav ul li:not(:last-of-type) {
+        display: flex;
+    }
+
+    nav ul img {
+        display: block;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(7 1fr);
+        grid-template-rows: 1fr 1.2fr;
+        grid-template-areas: "home . . . . . sign"
+                             "bfast brunch lunch din app dessert bev";
+        justify-content: space-between;
+    }
+
+    nav li:nth-of-type(1) {
+        grid-area: home;
+    }
+
+    nav li:nth-of-type(2) {
+        grid-area: bfast;
+    }
+
+    nav li:nth-of-type(3) {
+        grid-area: brunch;
+    }
+
+    nav li:nth-of-type(4) {
+        grid-area: lunch;
+    }
+
+    nav li:nth-of-type(5) {
+        grid-area: din;
+    }
+
+    nav li:nth-of-type(6) {
+        grid-area: app;
+    }
+
+    nav li:nth-of-type(7) {
+        grid-area: dessert;
+    }
+
+    nav li:nth-of-type(8) {
+        grid-area: bev;
+    }
+
+    nav li:nth-of-type(9) {
+        grid-area: sign;
+    }
+
+    form div {
+        position: relative;
+        bottom: 230px;
+        width: 400px;
+        margin: 0 0 0 250px;
+    }
+
+    div#desktopwidth {
+        margin-top: -120px;
+    }
 }
 
 
@@ -639,5 +730,26 @@ nav ul {
 
     h2 {
         font-size: 2em;
+    }
+
+    form div {
+        position: static;
+        margin: 0 auto;
+    }
+
+    div#desktopwidth {
+        margin-top: 0px;
+    }
+
+    header {
+        top: 215px;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(11 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: "home . bfast brunch lunch din app dessert bev . sign";
+        justify-content: space-between;
     }
 }
