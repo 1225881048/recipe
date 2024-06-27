@@ -272,7 +272,7 @@ input:checked ~ ul .menu, input:checked ~ ul .menu img {
 
 
 
-nav > div {
+/* nav > div {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: "menu home signup";
@@ -288,7 +288,7 @@ nav label {
 
 #signup {
     grid-area: signup;
-}
+} */
 
 
 
@@ -320,7 +320,7 @@ aside {
 
 header {
     position: absolute;
-    top: 250px;
+    top: 190px;
     left: 0; 
     right: 0; 
     margin-left: auto; 
@@ -328,17 +328,70 @@ header {
     width: 400px;
 }
 
+nav label {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+}
 
+nav label::after {
+    content: "Menu";
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5em;
+    color: #000;
+    padding: 0 10px;
+}
 
+#home {
+    background-color: #EB5428;
+    text-align: center;
+    padding: 10px;
+}
 
+#home a span {
+    display: none;
+}
 
+nav ul {
+    background-color: #fff;
+}
 
+nav > div {
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+    box-shadow: 0px 2px 5px #ababab;
+}
 
+nav label {
+    flex: 20%;
+}
 
+nav ul {
+    flex: 80%;
+    display: flex;
+}
 
+nav #home {
+    flex: 70%;
+}
 
+nav li:last-of-type {
+    flex:30%;
+}
 
+nav li:last-of-type::after {
+    content: "Sign In/Up";
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.5em;
+    color: #000;
+    padding: 0 10px;
+}
 
+nav ul {
+    margin: 0;
+    padding: 0;
+}
 
 
 
